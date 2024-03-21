@@ -1,0 +1,682 @@
+/*==================== GOOGLE FONTS ====================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=FredokaOne:wght@400;500;600&display=swap");
+
+/*==================== VARIABLES CSS ====================*/
+
+:root {
+    --header-height: 3rem;
+    /*========== Colors ==========*/
+    /* Change favorite color */
+    --hue-color: 166;
+    /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    /* HSL color mode */
+    --first-color: hsl(var(--hue-color), 47%, 38%);
+    --white: #fff;
+    --black: #23272E;
+    --dark: #292930;
+    --light: #F5F5F5;
+    --maron: #a80;
+    --red: #F3706A;
+    --yellow: #FFC400;
+    --yellow-light: #EBB942;
+    --green: #45B37E;
+    --blue: #0A3764;
+    --light-hight: #586470;
+    --first-color-second: #747D85;
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --title-color: hsl(206, 8%, 15%);
+    --text-color: #6E6E6E;
+    --text-color-light: hsl(206, 8%, 65%);
+    --input-color: hsl(206, 70%, 96%);
+    --body-color: #F2F2F2;
+    --container-color: var(--white);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 800;
+    /*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: 0.25rem;
+    --mb-0-5: 0.5rem;
+    --mb-0-75: 0.75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+
+/* Font size for large devices */
+
+@media screen and (min-width: 968px) {
+     :root {
+        --big-font-size: 2.5rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+
+
+/*========== Variables Dark theme ==========*/
+
+body.dark {
+    /* HSL color mode */
+    --title-color: hsl(var(--hue-color), 8%, 95%);
+    --white: #283046;
+    --black: #fff;
+    --light: #161D31;
+    --light-hight: #ddd;
+    --text-color: hsl(var(--hue-color), 8%, 75%);
+    --input-color: hsl(var(--hue-color), 29%, 16%);
+    --body-color: hsl(var(--hue-color), 29%, 12%);
+    --container-color: hsl(var(--hue-color), 29%, 16%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+}
+
+
+/*==================== BASE ====================*/
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    font-family: var(--body-font);
+    margin: 0px;
+    color: var(--text-color);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--body-font);
+    color: var(--text-color);
+}
+
+body {
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: var(--font-semi-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none !important;
+    color: var(--first-color) !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+label {
+    color: var(--text-color);
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+.text-italic- {
+    font-style: italic !important;
+}
+
+.bg-light- {
+    background-color: var(--light);
+}
+
+.bg-dark- {
+    background-color: var(--dark);
+}
+
+.bg-black- {
+    background-color: var(--black);
+}
+
+.bg-light-hight- {
+    background-color: var(--light-hight);
+}
+
+.bg-tcolor- {
+    background-color: var(--text-color);
+}
+
+.bg-primary- {
+    background-color: var(--first-color) !important;
+}
+
+.bg-second- {
+    background-color: var(--first-color-second) !important;
+}
+
+.bg-yellow- {
+    background-color: var(--yellow) !important;
+}
+
+.bg-yellow-light- {
+    background-color: var(--yellow-light) !important;
+}
+
+.bg-red- {
+    background-color: var(--red) !important;
+}
+
+.bg-green- {
+    background-color: var(--green) !important;
+}
+
+.bg-white- {
+    background-color: var(--white) !important;
+}
+
+.bg-black- {
+    background-color: var(--black) !important;
+}
+
+.text-primary- {
+    color: var(--first-color) !important;
+}
+
+.text-black- {
+    color: var(--black);
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.text-white- {
+    color: var(--white);
+}
+
+.text-red- {
+    color: var(--red) !important;
+}
+
+.text-second- {
+    color: var(--first-color-second) !important;
+}
+
+.text-yellow- {
+    color: var(--yellow);
+}
+
+.text-green- {
+    color: var(--green);
+}
+
+.text-color- {
+    color: var(--text-color) !important;
+}
+
+.text-1 {
+    font-size: 24px;
+}
+
+.text-2 {
+    font-size: 22px;
+}
+
+.text-3 {
+    font-size: 20px;
+}
+
+.text-4 {
+    font-size: 17px;
+}
+
+.text-5 {
+    font-size: 14px;
+}
+
+.text-6 {
+    font-size: 12px;
+}
+
+.text-ue {
+    font-size: 10px;
+}
+
+.text-7 {
+    font-size: 9px;
+}
+
+.text-lighter {
+    font-weight: 300;
+}
+
+.transition {
+    transition: all 0.2s;
+}
+
+.fit-content {
+    width: fit-content !important;
+}
+
+.set-opacity:hover {
+    opacity: 0.8 !important;
+}
+
+table tr {
+    border-bottom: 0.1px solid #ddd !important;
+    font-size: var(--small-font-size);
+    color: var(--black);
+}
+
+table tr i.delete:focus,
+table tr i.delete:hover {
+    color: var(--red);
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+.fw-900 {
+    font-weight: 900;
+}
+
+.fw-1000 {
+    font-weight: 1000;
+}
+
+
+/*==================== BUTTONS ====================*/
+
+.button {
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--white);
+    padding: 7px 20px;
+    border: none;
+    font-weight: 400 !important;
+    border-radius: 3px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+    color: #FFF;
+    font-size: 15px;
+    transition: all ease 0.3s;
+}
+
+.button:hover {
+    opacity: 0.8;
+    color: #f8f8ff !important;
+}
+
+.button-outline {
+    display: inline-block;
+    background-color: var(--white);
+    padding: 5px 13px;
+    border: 0.5px solid var(--first-color);
+    border-radius: 5px;
+    color: var(--first-color);
+    transition: all ease 0.3s;
+}
+
+.button-outline:hover,
+.button-outline:focus {
+    background-color: var(--first-color);
+    color: var(--white) !important;
+}
+
+.button-outline:hover i,
+.button-outline:focus i {
+    color: var(--white) !important;
+}
+
+.button-default {
+    display: inline-block;
+    padding: 7px 20px;
+    border: none;
+    font-weight: 700;
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+    transition: all ease 0.3s;
+}
+
+.button-default:hover {
+    opacity: 0.8;
+}
+
+
+/****************** INPUT ******************/
+
+input.form-neumorphism_pressed,
+select.form-neumorphism_pressed {
+    border: 0.05px solid #ccc;
+    width: 100%;
+    padding: 5px 8px;
+    height: 38px;
+    font-size: 14px !important;
+    color: var(--text-color);
+    border-radius: 4px;
+    background-color: var(--white);
+    font-family: sans-serif;
+    outline-color: var(--black);
+}
+
+.form-neumorphism_pressed {
+    border: 0.05px solid #FFF;
+    width: 100%;
+    padding: 8px 12px !important;
+    min-height: 44px;
+    font-size: 14px !important;
+    color: var(--text-color);
+    background-color: var(--white);
+    font-family: sans-serif;
+    outline-color: none !important;
+    border-radius: 8px;
+    box-shadow: inset 5px 5px 10px #DDD, inset -5px -5px 10px #ffffff;
+}
+
+.form-neumorphism_pressed:focus {
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 100%;
+    outline-color: var(--white);
+}
+
+input.form-neumorphism_pressed:focus,
+select.form-neumorphism_pressed:focus,
+textarea.form-neumorphism_pressed:focus {
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 100%;
+    outline-color: var(--first-color);
+}
+
+textarea.form-neumorphism_pressed {
+    border: 0.05px solid #ccc;
+    padding: 8px;
+    width: 100%;
+    font-size: 15px;
+    color: var(--text-color);
+    border-radius: 1px;
+    outline-color: var(--black);
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+
+/************* MY OWN CONTAINER ************/
+
+.containe {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .containe {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .containe {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .containe {
+        width: 1100px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--orange);
+    border-radius: 0px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: var(--first-color);
+    border-radius: 0px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: var(--first-color-second);
+}
+
+
+/******************* NAV ********************/
+
+.nav-item {
+    color: var(--black);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.neumorphism_pressed {
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: inset 5px 5px 10px #d4d1d1, inset -5px -5px 10px #ffffff;
+}
+
+
+/********** NAV ****************/
+
+.nav-link-desktop {
+    margin-left: 30px !important;
+    color: var(--black) !important;
+    font-weight: 600;
+}
+
+.nav-link-desktop:hover,
+.nav-link-desktop:focus {
+    color: var(--first-color) !important;
+}
+
+.nav-link-mobile {
+    text-align: center;
+    margin-top: 30px !important;
+    color: var(--white) !important;
+}
+
+.nav-link-mobile:hover,
+.nav-link-mobile:focus {
+    color: var(--white) !important;
+}
+
+.logo {
+    height: 65px;
+    object-fit: cover;
+}
+
+.logondc {
+    height: 65px;
+    padding: 8px;
+}
+
+
+/************** HEADER **************/
+
+.header {
+    min-height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/************** BEST ************/
+
+.card_best {
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 40px 0px;
+    background-position: center;
+    margin-top: 10px;
+}
+
+.card_best_image {
+    height: 80px;
+    width: 100px;
+    margin-right: 30px;
+}
+
+@media screen and (max-width: 992px) {
+    .card_best {
+        background-image: none;
+    }
+}
+
+
+/**************** ABOUT ***********/
+
+.about_image {
+    height: 400px;
+    width: 100% !important;
+}
+
+
+/************ INDEX REPORTS ***************/
+
+.box-shadow- {
+    box-shadow: 0px 3px 6px rgba(37, 130, 184, 0.16);
+}
+
+
+/*********************************/
+
+.swiper {
+    width: 100%;
+    height: 200px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 120px;
+    object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+    width: 20px !important;
+    height: 20px !important;
+    text-align: center;
+    line-height: 20px !important;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: var(--first-color) !important;
+}
+
+.gallery_single_img {
+    height: 250px;
+    object-fit: cover;
+    border: 1px solid var(--white);
+}
+
+.gallery_single_img:hover {
+    transform: scale(1.1);
+    border-radius: 10px;
+    background-color: var(--dark);
+    box-shadow: 0px 3px 6px var(--first-color);
+    object-fit: contain !important;
+}
